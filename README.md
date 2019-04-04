@@ -1,4 +1,5 @@
 # Serverless: Self-service : Reset password and retrieve it using one time link 
+[![CodeFactor](https://www.codefactor.io/repository/github/abiydv/sls-password-link/badge/master)](https://www.codefactor.io/repository/github/abiydv/sls-password-link/overview/master)
 
 ![servrless](https://github.com/abiydv/ref-docs/blob/master/images/logos/serverless_small.png)
 ![py](https://github.com/abiydv/ref-docs/blob/master/images/logos/python_small.png)

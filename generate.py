@@ -57,7 +57,7 @@ def generatepassword(user):
 
 def validate(username):
     match = re.match('^[_a-z0-9-]+(\.[_a-z0-9-]+)*@example.com$', username)
-    if match == None:
+    if match is None:
         raise ValueError("Invalid",username)
     else:
         print ("Valid " + username)
