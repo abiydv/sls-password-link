@@ -50,7 +50,7 @@ This will give you an output like -
 	message: "Notedown your initial-signon password, this link will expire after you close this page",
 	password: "gLwr7np$34dW"
 }
-
+```
 If you hit the same url again, it should now give you an error - 
 ```
 {
