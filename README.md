@@ -9,7 +9,14 @@
 
 As often needed, users have to reset their password for different systems. Sending these passwords over email is not secure. I wrote this small utility which resets a user password and saves it in the AWS Parameter store and also provides a link to extract this password ONCE. As soon as the user extracts this password - it is no longer possible to retreive it again. Once setup and running, it does not need any intervention.
 
-This is NOT a full blown solution as you will need to take care of authentication and authorization of the api (currently it is public). Treat this more as a proof of concept to use/implement using native AWS services without adopting any additional tools.
+An example use case could be to allow IAM users to reset their passwords if they forget it rather than requesting someone else (admin team, maybe?) to do it for them.
+
+Needless to say, this is NOT a full blown solution as you will need to take care of authentication and authorization of the api (currently it is public). Treat this more as a proof of concept to use/implement using native AWS services without adopting any additional tools.
+
+## ARCHITECTURE
+
+This is a simplified view of the components being used. It is fairly lightweight and as part of a bigger setup, it probably wouldn't even be noticed w.r.t cost.
+![arch](https://github.com/abiydv/ref-docs/blob/master/images/arch/GH_PWD_LINK.png)
 
 ## BEFORE YOU BEGIN
 #### 1. Serverless. 
