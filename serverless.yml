@@ -1,0 +1,39 @@
+service: password-link
+
+provider:
+  name: aws
+  runtime: python3.7
+  memorySize: 128
+  timeout: 30
+  profile: master
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - "organizations:*"
+        - "sqs:*"
+        - "ses:*"
+        - "sts:*"
+        - "ssm:*"
+        - "kms:*"
+        - "cloudwatch:*"
+      Resource: "*"
+
+functions:
+  extract:
+    handler: extract.begin
+    description: 'extract password'
+    events:
+      - http:
+          path: extract
+          method: GET
+
+  generate:
+    handler: generate.begin
+    description: 'save password'
+    environment:
+      serviceapi: ${cf:password-link-dev.ServiceEndpoint}
+    events:
+      - http:
+          path: generate
+          method: GET
