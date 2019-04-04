@@ -1,4 +1,4 @@
-# Serverless: Reset user password and provide a link to extract the new password
+# Serverless: Self-service : Reset password and retrieve it using one time link 
 
 ![servrless](https://github.com/abiydv/ref-docs/blob/master/images/logos/serverless_small.png)
 ![py](https://github.com/abiydv/ref-docs/blob/master/images/logos/python_small.png)
@@ -7,7 +7,7 @@
 
 ## BACKGROUND
 
-As often needed, users have to reset their password for different systems. Sending these passwords over email is not much secure either. I wrote this small utility which resets a user password and saves it in the AWS Parameter store and also provides a link to extract this password ONCE. As soon as the user extracts this password - it is no longer possible to retreive it again.
+As often needed, users have to reset their password for different systems. Sending these passwords over email is not secure. I wrote this small utility which resets a user password and saves it in the AWS Parameter store and also provides a link to extract this password ONCE. As soon as the user extracts this password - it is no longer possible to retreive it again. Once setup and running, it does not need any intervention.
 
 This is NOT a full blown solution as you will need to take care of authentication and authorization of the api (currently it is public). Treat this more as a proof of concept to use/implement using native AWS services without adopting any additional tools.
 
