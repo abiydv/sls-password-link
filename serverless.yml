@@ -5,7 +5,7 @@ provider:
   runtime: python3.7
   memorySize: 128
   timeout: 30
-  profile: master
+  profile: dev       # aws cli profile
   region: us-east-1
   iamRoleStatements:
     - Effect: Allow
