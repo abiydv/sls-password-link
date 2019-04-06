@@ -10,10 +10,7 @@ provider:
   iamRoleStatements:
     - Effect: Allow
       Action:
-        - "organizations:*"
-        - "sqs:*"
         - "ses:*"
-        - "sts:*"
         - "ssm:*"
         - "kms:*"
         - "iam:*"
